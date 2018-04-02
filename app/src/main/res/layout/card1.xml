@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="@dimen/corner">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/imageHeight"
+                android:scaleType="fitXY"
+                android:src="@drawable/img1"
+                app:riv_corner_radius_top_left="@dimen/corner"
+                app:riv_corner_radius_top_right="@dimen/corner"
+                app:riv_tile_mode="clamp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/subheading"
+                    style="@style/layoutText"
+                    android:maxLines="2"
+                    android:text="@string/sub_heading"
+                    android:textColor="@color/subHeadingColor"
+                    android:textSize="@dimen/sub_heading"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/content"
+                    style="@style/layoutText"
+                    android:text="@string/content"
+                    android:textColor="@color/contentColor"
+                    android:textSize="@dimen/content"
+                    android:textStyle="normal" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/moreAt"
+                        style="@style/layoutText"
+                        android:text="@string/moreAt"
+                        android:textColor="@color/moreShortTextColor"
+                        android:textSize="@dimen/moreShort"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/shortBy"
+                        style="@style/layoutText"
+                        android:text="@string/shortBY"
+                        android:textColor="@color/moreShortTextColor"
+                        android:textSize="@dimen/moreShort"
+                        android:textStyle="normal"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/read_more_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img1"
+                    app:riv_corner_radius_bottom_left="@dimen/corner"
+                    app:riv_corner_radius_bottom_right="@dimen/corner"
+                    app:riv_tile_mode="clamp" />
+
+                <TextView
+                    android:id="@+id/read_more"
+                    style="@style/layoutText"
+                    android:text="@string/read_more"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>
