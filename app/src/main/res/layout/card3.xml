@@ -36,6 +36,7 @@
                 <TextView
                     android:id="@+id/subheading"
                     style="@style/layoutText"
+                    android:fontFamily="sans-serif"
                     android:maxLines="2"
                     android:text="@string/sub_heading3"
                     android:textColor="@color/subHeadingColor"
@@ -65,6 +66,7 @@
                     <TextView
                         android:id="@+id/shortBy"
                         style="@style/layoutText"
+                        android:fontFamily="sans-serif"
                         android:text="@string/shortBY"
                         android:textColor="@color/moreShortTextColor"
                         android:textSize="@dimen/moreShort"
