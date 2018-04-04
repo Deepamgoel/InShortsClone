@@ -22,7 +22,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/imageHeight"
                 android:scaleType="fitXY"
-                android:src="@drawable/img3"
                 app:riv_corner_radius_top_left="@dimen/corner"
                 app:riv_corner_radius_top_right="@dimen/corner"
                 app:riv_tile_mode="clamp" />
@@ -36,17 +35,19 @@
                 <TextView
                     android:id="@+id/subheading"
                     style="@style/layoutText"
-                    android:fontFamily="sans-serif"
+                    android:fontFamily="@font/droid_sans"
+                    android:lineSpacingMultiplier="1.2"
                     android:maxLines="2"
-                    android:text="@string/sub_heading3"
                     android:textColor="@color/subHeadingColor"
-                    android:textSize="@dimen/sub_heading"
+                    android:textSize="@dimen/subHeading"
                     android:textStyle="normal" />
 
                 <TextView
                     android:id="@+id/content"
                     style="@style/layoutText"
-                    android:text="@string/content3"
+                    android:alpha="0.7"
+                    android:fontFamily="@font/droid_sans"
+                    android:lineSpacingMultiplier="1.2"
                     android:textColor="@color/contentColor"
                     android:textSize="@dimen/content"
                     android:textStyle="normal" />
@@ -66,7 +67,6 @@
                     <TextView
                         android:id="@+id/shortBy"
                         style="@style/layoutText"
-                        android:fontFamily="sans-serif"
                         android:text="@string/shortBY"
                         android:textColor="@color/moreShortTextColor"
                         android:textSize="@dimen/moreShort"
@@ -77,30 +77,49 @@
 
             </LinearLayout>
 
-            <LinearLayout
+            <FrameLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_weight="1">
 
                 <com.makeramen.roundedimageview.RoundedImageView
                     android:id="@+id/read_more_image"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:alpha="0.5"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/img3"
                     app:riv_corner_radius_bottom_left="@dimen/corner"
                     app:riv_corner_radius_bottom_right="@dimen/corner"
                     app:riv_tile_mode="clamp" />
 
-                <TextView
-                    android:id="@+id/read_more"
-                    style="@style/layoutText"
-                    android:text="@string/read_more3"
-                    android:textColor="@android:color/white" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/read_more"
+                        style="@style/layoutText"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/droid_sans"
+                        android:textColor="@color/tap"
+                        android:textSize="@dimen/readMore" />
+
+                    <TextView
+                        android:id="@+id/tapHere"
+                        style="@style/layoutText"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="-1dp"
+                        android:fontFamily="@font/roboto_thin"
+                        android:text="@string/tapHere"
+                        android:textColor="@color/tap"
+                        android:textSize="@dimen/tapHere" />
+
+                </LinearLayout>
+
+            </FrameLayout>
 
         </LinearLayout>
 

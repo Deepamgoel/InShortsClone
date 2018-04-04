@@ -6,4 +6,5 @@
     <color name="subHeadingColor">#b8b9c2</color>
     <color name="contentColor">#9c9da4</color>
     <color name="moreShortTextColor">#5C5D62</color>
+    <color name="tap">#D9D9D9</color>
 </resources>

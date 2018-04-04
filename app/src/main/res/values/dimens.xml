@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <dimen name="sub_heading">16sp</dimen>
+    <dimen name="subHeading">16sp</dimen>
     <dimen name="content">14sp</dimen>
     <dimen name="moreShort">10sp</dimen>
+    <dimen name="readMore">12sp</dimen>
+    <dimen name="tapHere">11sp</dimen>
+
+
     <dimen name="corner">10dip</dimen>
-    <dimen name="marginTop">10dp</dimen>
+
+    <dimen name="marginTop">8dp</dimen>
     <dimen name="marginStart">16dp</dimen>
     <dimen name="marginEnd">21dp</dimen>
+
     <dimen name="imageHeight">256dp</dimen>
+
     <dimen name="padding">10dp</dimen>
 </resources>
