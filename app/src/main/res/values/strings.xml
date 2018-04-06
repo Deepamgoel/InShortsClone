@@ -22,5 +22,14 @@
     <string name="moreAt">more at Reuters/Yesterday</string>
     <string name="shortBY">short By Deepam Goel</string>
     <string name="tapHere">Tap here to read more</string>
+    <string name="my_feed">My Feed</string>
+    <string name="like">Like</string>
+    <string name="like_count" />
+    <string name="share">Share</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="image">Image</string>
+    <string name="read_more_image">Read More</string>
+    <string name="menu">Menu</string>
+    <string name="refresh">refresh</string>
 
 </resources>

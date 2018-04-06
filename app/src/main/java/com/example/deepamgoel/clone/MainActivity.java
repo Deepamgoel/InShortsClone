@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -12,6 +13,9 @@ public class MainActivity extends AppCompatActivity {
 
         VerticalViewPager viewPager = findViewById(R.id.card_view);
         viewPager.setAdapter(new SlidePageAdapter(this));
-}
+
+    }
+
 
 }
+

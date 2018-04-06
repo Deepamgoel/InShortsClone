@@ -16,4 +16,5 @@
     <dimen name="imageHeight">256dp</dimen>
 
     <dimen name="padding">10dp</dimen>
+    <dimen name="iconDimen">24dp</dimen>
 </resources>

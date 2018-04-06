@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="top"
+        android:background="#111" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingVertical="@dimen/marginTop">
+
+            <ImageView
+                android:id="@+id/like"
+                android:layout_width="@dimen/iconDimen"
+                android:layout_height="@dimen/iconDimen"
+                android:contentDescription="@string/like"
+                android:src="@drawable/thumb_up_outline"
+                android:tag="like_outline" />
+
+            <TextView
+                android:id="@+id/like_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/like"
+                android:layout_marginStart="@dimen/marginTop"
+                android:layout_toEndOf="@id/like"
+                android:text="@string/like_count"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/moreShort" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingVertical="@dimen/marginTop">
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="@dimen/iconDimen"
+                android:layout_height="@dimen/iconDimen"
+                android:contentDescription="@string/share"
+                android:src="@drawable/share_variant"
+                android:tag="share" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingVertical="@dimen/marginTop">
+
+            <ImageView
+                android:id="@+id/bookmark"
+                android:layout_width="@dimen/iconDimen"
+                android:layout_height="@dimen/iconDimen"
+                android:layout_gravity="center"
+                android:contentDescription="@string/bookmark"
+                android:src="@drawable/bookmark_outline"
+                android:tag="bookmark_outline" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
