@@ -1,6 +1,7 @@
 package com.example.deepamgoel.clone;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.BitmapDrawable;
@@ -15,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Objects;
 
 public class SlidePageAdapter extends PagerAdapter {
 
@@ -49,11 +52,11 @@ public class SlidePageAdapter extends PagerAdapter {
 
     @NonNull
     @Override
-    public Object instantiateItem(@NonNull ViewGroup container, int position) {
+    public Object instantiateItem(@NonNull ViewGroup container, final int position) {
 
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        View view = layoutInflater.inflate(R.layout.card_layout, container, false);
+        View view = Objects.requireNonNull(layoutInflater).inflate(R.layout.card_layout, container, false);
 
         final ImageView image = view.findViewById(R.id.image);
         final ImageView readMoreImage = view.findViewById(R.id.read_more_image);
@@ -67,7 +70,7 @@ public class SlidePageAdapter extends PagerAdapter {
 
         final ImageView like = view.findViewById(R.id.like);
         final TextView like_count = view.findViewById(R.id.like_count);
-//        final ImageView share = view.findViewById(R.id.share);
+        final ImageView share = view.findViewById(R.id.share);
         final ImageView bookmark = view.findViewById(R.id.bookmark);
 
         image.setImageResource(imageImageView[position]);
@@ -138,6 +141,16 @@ public class SlidePageAdapter extends PagerAdapter {
             }
         });
 
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(android.content.Intent.EXTRA_SUBJECT, subHeadingTextView[position]);
+                intent.putExtra(android.content.Intent.EXTRA_TEXT, contentTextView[position]);
+                context.startActivity(intent);
+            }
+        });
 
         heading.setOnClickListener(new View.OnClickListener() {
             @Override
